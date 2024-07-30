@@ -6,5 +6,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - qemu-volume:/jcstudy
     stdin_open: true
     tty: true
+
+volumes:
+  qemu-volume:
+    external: true
