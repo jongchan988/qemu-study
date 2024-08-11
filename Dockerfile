@@ -26,3 +26,4 @@ WORKDIR /jcstudy/qemu
 # configure 스크립트 실행
 RUN ./configure
 RUN make
+ --target-list=avr32-softmmu

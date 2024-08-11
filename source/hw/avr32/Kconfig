@@ -4,3 +4,6 @@ config AVR32EXP_MCU
 config AVR32EXAMPLE_BOARD
     bool
     select AVR32EXP_MCU
+
+config AVR32
+    bool
