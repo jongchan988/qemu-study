@@ -1,16 +1,15 @@
 version: '3.8'
 
 services:
-  qemu:
-    container_name: "qemu"
+  qemu-avr32:
+    container_name: "qemu-avr32"
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - qemu-volume:/jcstudy
+      - avr32:/jcstudy
     stdin_open: true
     tty: true
-
 volumes:
-  qemu-volume:
+  avr32:
     external: true

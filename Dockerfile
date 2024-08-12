@@ -18,12 +18,7 @@ RUN apt-get update && apt-get install -y \
     flex \
     bison
 
-RUN git clone https://github.com/qemu/qemu.git
+RUN git clone https://github.com/flogosec/qemu-avr32.git
 
 # 작업 디렉토리 설정
-WORKDIR /jcstudy/qemu
-
-# configure 스크립트 실행
-RUN ./configure
-RUN make
- --target-list=avr32-softmmu
+WORKDIR /jcstudy/qemu-avr32
