@@ -1,0 +1,8 @@
+&rs_rd              rs rd
+&rd_rx_ry_sa        rd rx ry sa
+
+@op_rs_rd           ... rs:4 ..... rd:4                         &rs_rd
+@op_rd_rx_ry_sa     ... rx:4 ..... ry:4 .... .... .. sa:2 rd:4  &rd_rx_ry_sa
+
+ADD_rd_rs       000 .... 00000 ....                          @op_rs_rd
+ADD_rd_rx_ry_sa 111 .... 00000 .... 0000 0000 00 .. ....     @op_rd_rx_ry_sa

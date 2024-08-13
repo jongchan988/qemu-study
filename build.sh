@@ -12,6 +12,6 @@ DESTINATION_PATH="/jcstudy/qemu-avr32/"
 # cp to container
 docker cp "$SOURCE_DIR" "$CONTAINER_NAME:$DESTINATION_PATH"
 # cmd
-DOCKER_CMD="./configure --target-list=avr32-softmmu"
+DOCKER_CMD="./configure --target-list=jc1904-softmmu"
 # exec
 docker exec -it "$CONTAINER_NAME" bash -c "$DOCKER_CMD"

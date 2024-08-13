@@ -1,0 +1,6 @@
+config JC1904EXP_MCU
+    bool
+
+config JC1904EXAMPLE_BOARD
+    bool
+    select JC1904EXP_MCU
