@@ -15,6 +15,7 @@ typedef struct JC1904ExampleBoardMachineState JC1904ExampleBoardMachineState;
 struct JC1904ExampleBoardMachineClass {
     MachineClass parent_class;
 };
+typedef struct JC1904ExampleBoardMachineClass JC1904ExampleBoardMachineClass;
 
 #define TYPE_JC1904EXAMPLE_BOARD_BASE_MACHINE MACHINE_TYPE_NAME("jc1904example-board-base")
 #define TYPE_JC1904EXAMPLE_BOARD_MACHINE MACHINE_TYPE_NAME("jc1904example-board")

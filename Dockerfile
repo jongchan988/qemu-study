@@ -15,10 +15,20 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-venv \
     python3-pip \
+    python3-colorama \
     flex \
-    bison
+    bison \
+    vim
 
 RUN git clone https://github.com/flogosec/qemu-avr32.git
 
+RUN git clone https://github.com/flogosec/qemu-avr32-testing.git
+
 # 작업 디렉토리 설정
 WORKDIR /jcstudy/qemu-avr32
+
+# avr32-gnu-toolchain
+COPY avr32-gnu-toolchain /jcstudy/avr32-gnu-toolchain
+COPY qemu-avr32-testing /jcstudy/qemu-avr32-testing
+
+RUN /bin/bash /jcstudy/avr32-gnu-toolchain/install.sh

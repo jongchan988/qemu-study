@@ -20,5 +20,5 @@ struct JC1904EXPMcuState {
 
      // 펌웨어를 포함하는 플래시 메모리
      MemoryRegion flash;
-}
+};
 #endif // HW_JC1904_JC1904EXPC_H

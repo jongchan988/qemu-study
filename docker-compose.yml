@@ -10,6 +10,7 @@ services:
       - avr32:/jcstudy
     stdin_open: true
     tty: true
+    privileged: true
 volumes:
   avr32:
     external: true

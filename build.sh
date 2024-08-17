@@ -15,3 +15,6 @@ docker cp "$SOURCE_DIR" "$CONTAINER_NAME:$DESTINATION_PATH"
 DOCKER_CMD="./configure --target-list=jc1904-softmmu"
 # exec
 docker exec -it "$CONTAINER_NAME" bash -c "$DOCKER_CMD"
+# make
+docker exec -it "$CONTAINER_NAME" bash -c "make -j 16"
+

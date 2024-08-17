@@ -7,6 +7,7 @@
 #include "hw/core/tcg-cpu-ops.h"
 #include "exec/address-spaces.h"
 #include "exec/helper-proto.h"
+#include "helper.c"
 
 static JC1904ACPU * cpu_self;
 static bool first_reset = true;
@@ -29,6 +30,11 @@ static void jc1904a_cpu_init(Object* obj)
 
     cpu_set_cpustate_pointers(cpu);
     cs->env_ptr = env;
+}
+
+static void jc1904b_cpu_init(Object* obj)
+{
+    // TODO
 }
 
 //Realize function, sets up the CPU
@@ -191,6 +197,10 @@ static void jc1904a_cpu_class_init(ObjectClass *oc, void *data)
     cc->tcg_ops = &jc1904_tcg_ops;
 }
 
+static void jc1904b_cpu_class_init(ObjectClass *oc, void *data)
+{
+    // TODO
+}
 static const JC1904ACPUDef jc1904_cpu_defs[] = {
         {
                 //This is the TYPE that was defined in jc1904emp.h in the /hw folder
